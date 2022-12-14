@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TUNDER_APP }}'
-          projectId: tunder-app
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TUNDER_APP_BF1B1 }}'
+          projectId: tunder-app-bf1b1
